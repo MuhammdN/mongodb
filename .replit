@@ -1,0 +1,12 @@
+modules = ["cpp-clang14", "nodejs-20", "swift-5.8"]
+run = "node index.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "node index.js"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
